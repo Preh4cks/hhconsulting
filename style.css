@@ -9,8 +9,75 @@
 :root {
   --color-blue: #032d51;
   --color-lightblue: #01a3d8;
+  --color-gray: #748678;
   --color-gold: #b59f55;
 }
+
+.blue_button {
+  background-color: var(--color-blue);
+  color: white;
+  padding: 10px 20px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  width: max-content;
+}
+.blue_button:hover {
+  background-color: var(--color-gold);
+}
+.white_button {
+  background-color: white;
+  color: var(--color-blue);
+  padding: 10px 20px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  width: max-content;
+}
+.white_button:hover {
+  background-color: var(--color-blue);
+  color: white;
+}
+.gray_button {
+  background-color: var(--color-gray);
+  color: white;
+  padding: 10px 20px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  width: max-content;
+}
+.gray_button:hover {
+  background-color: var(--color-gold);
+  color: white;
+}
+.gold_button {
+  background-color: var(--color-gold);
+  color: white;
+  padding: 10px 20px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  width: max-content;
+}
+.gold_button:hover {
+  background-color: var(--color-blue);
+  color: white;
+}
+
+
 
 body {
   padding-top: 80px;
@@ -120,6 +187,13 @@ nav {
         text-decoration: underline;
         text-decoration-color: var(--color-gold);
       }
+      .container > .text > a {
+        display: inline-block;
+        margin-right: 10px;
+      }
+      .container > .text > .blue_button {
+        border: 1px solid var(--color-gold);
+      }
     .hero > .container > .video {
       position: absolute;
       top: 50%;
@@ -141,43 +215,28 @@ nav {
           width: 100px;
           height: 100px;
         }
-
-.blue_button {
-  background-color: var(--color-blue);
-  color: white;
-  border: 1px solid var(--color-gold);
-  padding: 10px 20px;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  font-size: 16px;
-  cursor: pointer;
-  text-decoration: none;
-  display: block;
-  width: max-content;
-}
-.blue_button:hover {
-  background-color: var(--color-gold);
-  border: 1px solid var(--color-blue);
-}
-
+/* Clients */
 #clients {
-  max-width: 1280px;
-  margin: 40px auto;
-  padding: 0px 20px;
+  padding: 40px 0px;
 }
   #clients > h2 {
     font-size: 26px;
     font-weight: 600;
     color: var(--color-blue);
     text-align: center;
+    text-decoration: underline;
+    text-decoration-color: var(--color-gold);
   }
     #clients > p {
       font-size: 16px;
       font-weight: 400;
       color: var(--color-blue);
       text-align: center;
-      margin-bottom: 40px;
     }
+  #clients .carousel {
+    max-width: 1280px;
+    margin: 20px auto;
+  }
   #clients .slick-track {
     display: flex;
   }
@@ -196,15 +255,116 @@ nav {
         }
 
 
-/* DNA */
-#dna {
-  max-height: 400px;
+/* Projects */
+#projects {
   position: relative;
+  padding: 40px 0px;
 }
-  #dna > img {
-    height: 400px;
-    width: 100%;
-    object-fit: cover;
-    object-position: 0;
-    filter: brightness(0.3);
+  #projects > h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--color-blue);
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: var(--color-gold);
   }
+  #projects > .projects_carousel {
+    max-width: 1280px;
+    margin: auto;
+    padding: 20px 0px
+  }
+  #projects > .projects_carousel .item {
+    margin: 0px 20px;
+    position: relative;
+  }
+    .projects_carousel .item > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      max-height: 400px;
+      border-radius: 10px;
+    }
+    .projects_carousel .item:hover > img {
+      filter: brightness(0.4);
+    }
+    .projects_carousel .item > .text {
+      display: none;
+      position: absolute;
+      top: 0%;
+      left: 5%;
+      padding: 20px;
+      color: white;
+      background-color: var(--color-blue);
+      padding: 20px;
+      width: 40%;
+      height: 80%;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    .projects_carousel .item:hover > .text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .projects_carousel .item > .text h3 {
+      font-size: 21px;
+    }
+    .projects_carousel .item > .text p {
+      text-align: center;
+      font-size: 16px;
+    }
+
+/* Services */
+#services {
+  padding: 40px 0px;
+  background-color: #f7f7f7;
+}
+  #services > h2 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--color-blue);
+    text-decoration: underline;
+    text-decoration-color: var(--color-gold);
+  }
+  #services > p {
+    text-align: center;
+    font-size: 16px;
+    color: var(--color-blue);
+    margin-bottom: 20px;
+  }
+  #services > .services_carousel {
+    margin: 20px auto;
+    max-width: 1280px;
+  }
+    #services > .services_carousel .item {
+      margin: 0px 20px;
+      position: relative;
+    }
+      .services_carousel .item > img {
+        width: 100%;
+      }
+        .services_carousel .item > .text {
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 80%;
+        }
+        .services_carousel .item > .text > p {
+          font-size: 14.5px;
+        }
+        .services_carousel .item > .text > a {
+          display: none;
+          margin: auto;
+          width: max-content;
+        }
+        .services_carousel .item:hover > .text > a {
+          display: block;
+        }
+        .services_carousel .item:hover > .text > p {
+          display: none;
+        }
+
