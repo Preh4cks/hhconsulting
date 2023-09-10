@@ -488,19 +488,16 @@ footer {
       width: 50%;
       position: relative;
     }
-    #slicer > .triangle_element {
-      width: 35%;
-      height: auto;
-      border-radius: 10px;
-      aspect-ratio: 1/1;
-      background-color: white;
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
     #slicer > .text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: white;
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+      padding: 10px;
       position: absolute;
       color: var(--color-blue);
       z-index: 1;
@@ -516,8 +513,60 @@ footer {
       font-size: 14.5px;
     } 
     #slicer > .text > img {
-      width: 30%;
-      margin-bottom: 10px;
+      width: 50px;
+      margin-bottom: 20px;
       filter: invert(70%) sepia(14%) saturate(1338%) hue-rotate(9deg) brightness(91%) contrast(81%);
       /* filter: invert(11%) sepia(23%) saturate(7125%) hue-rotate(192deg) brightness(93%) contrast(98%); */
     }
+    #slicer > #floating1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: white;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      border-radius: 10px;
+      text-align: center;
+      color: var(--color-blue);
+    }
+      #slicer > #floating1 > h6 { 
+        font-size: 16px;
+      }
+      #slicer > #floating1 > p {
+        font-size: 13px; 
+      }
+      #slicer > #floating1 > img {
+        width: 50px;
+        margin-bottom: 20px;
+        filter: invert(70%) sepia(14%) saturate(1338%) hue-rotate(9deg) brightness(91%) contrast(81%);
+      }
+    #slicer > #floating2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: white;
+      width: 150px;
+      height: 150px;    
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      border-radius: 10px;
+      text-align: center;
+      color: var(--color-blue);
+    }
+      #slicer > #floating2 > h6 { 
+        font-size: 16px;
+      }
+      #slicer > #floating2 > p {
+        font-size: 13px; 
+      }
+      #slicer > #floating2 > img {
+        width: 50px;
+        margin-bottom: 20px;
+        filter: invert(70%) sepia(14%) saturate(1338%) hue-rotate(9deg) brightness(91%) contrast(81%);
+      }
