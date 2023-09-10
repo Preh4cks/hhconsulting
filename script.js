@@ -10,16 +10,6 @@
       arrows: false,
     });
 
-    $('.projects_carousel').slick({
-      infinite: true,
-      slidesToShow: 2,
-      slidesToScroll: 2,
-      autoplay: true,
-      autoplaySpeed: 4000,
-      speed: 1600,
-      arrows: false,
-    });
-
     $('.services_carousel').slick({
       infinite: true,
       slidesToShow: 4,
@@ -28,6 +18,11 @@
       autoplaySpeed: 5000,
       speed: 1600,
       arrows: false,
+    });
+
+    $(document).on("click", '[data-toggle="lightbox"]', function(event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
     });
   });
 })();
