@@ -24,5 +24,7 @@
       event.preventDefault();
       $(this).ekkoLightbox();
     });
+
+    $
   });
 })();

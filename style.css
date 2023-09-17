@@ -117,6 +117,12 @@ nav {
             display: inline;
             height: 60px;
           }
+          .container > .left > a:hover {
+            filter: invert(70%) sepia(14%) saturate(1338%) hue-rotate(9deg) brightness(91%) contrast(81%);
+          }
+            .container > .left > a > img {
+              height: 60px;
+            }
         /* Nav Right */
         .container > .right > .menu {
           display: flex;
@@ -136,17 +142,17 @@ nav {
           }
 
 /* Hero */
-.hero {
+#hero {
   max-height: 400px;
   position: relative;
 }
-  .hero > img {
+  #hero > img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     filter: brightness(0.3);
   }
-  .hero > #demo-canvas {
+  #hero > #demo-canvas {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -155,7 +161,7 @@ nav {
     left: -50px;
     z-index: 9;
   }
-  .hero > .container {
+  #hero > .container {
     position: absolute;
     max-width: 1280px;
     top: 0px;
@@ -168,7 +174,7 @@ nav {
     padding: 0px 20px;
     z-index: 9999;
   }
-    .hero > .container > .text {
+    #hero > .container > .text {
       width: 50%;
       color: white;
     }
@@ -194,7 +200,7 @@ nav {
       .container > .text > .blue_button {
         border: 1px solid var(--color-gold);
       }
-    .hero > .container > .video {
+    #hero > .container > .video {
       position: absolute;
       top: 50%;
       right: 0px;
@@ -402,7 +408,15 @@ footer {
       }
         footer > .container > .bottom_left > a {
           text-decoration: none;
+          display: inline;
+          height: 60px;
         }
+          footer > .container > .bottom_left > a:hover {
+            filter: invert(70%) sepia(14%) saturate(1338%) hue-rotate(9deg) brightness(91%) contrast(81%);
+          }
+          footer > .container > .bottom_left > a > img {
+            height: 60px;
+          }
         footer > .container > .bottom_left > .socials {
           display: flex;
           width: 110px;
@@ -453,11 +467,6 @@ footer {
       }
 
       
-
-* {
-  /* outline: 1px solid red; */
-}
-
 #dna {
   height: 400px;
   margin-top: 40px;
@@ -570,3 +579,245 @@ footer {
         margin-bottom: 20px;
         filter: invert(70%) sepia(14%) saturate(1338%) hue-rotate(9deg) brightness(91%) contrast(81%);
       }
+
+#hero.block > img {
+  max-height: 400px;
+  object-fit: cover;
+}
+  #hero.block > .container > .logo {
+    width: 50%;
+  }
+    #hero.block > .container > .logo > img {
+      width: 50%;
+      margin: auto;
+      display: block;
+      filter: invert(1);
+    }
+
+#partners {
+  width: 100%;
+  padding: 40px 0px;
+}
+  #partners > h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--color-blue);
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: var(--color-gold);
+  }
+    #partners > h2 {
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--color-blue);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  #partners > .container {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+    #partners > .container > .card {
+      width: 33%;
+    }
+      #partners > .container > .card > .image_container {
+        max-height: 80px;
+        margin: 20px 0px;
+        display: flex;
+        justify-content: space-evenly;
+      }
+        #partners > .container > .card > .image_container > img {
+          max-height: 80px;
+        }
+      #partners > .container > .card > .text {
+        width: 90%;
+        margin: auto;
+        text-align: justify;
+      }
+      #partners > .container > .card > .text > p {
+        font-size: 16px;
+        color: var(--color-blue);
+      }
+        #partners > .container > .card > .text > p > .link {
+          font-weight: 600;
+          color: var(--color-blue);
+        }
+        #partners > .container > .card > .text > p > .link:hover {
+          color: var(--color-gold);
+        }
+
+#team {
+  width: 100%;
+  padding: 40px 0px;
+  background-color: #f7f7f7;
+}
+  #team > h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--color-blue);
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: var(--color-gold);
+    margin-bottom: 40px;
+  }
+  #team > .container {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0px 20px;
+  }
+    #team > .container > .leaders {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 60px;
+    }
+      #team > .container > .leaders > .card {
+        width: 48%;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 20px;
+        background: #e0e0e0;
+        box-shadow:  20px 20px 60px #bebebe,
+                    -20px -20px 60px #ffffff;
+        padding: 20px;
+      }
+        #team > .container > .leaders > .card > .image_container {
+          width: 35%;
+          margin: auto;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+          #team > .container > .leaders > .card > .image_container > img {
+            border-radius: 50%;
+            width: 100%;
+            margin: auto;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+          }
+            #team > .container > .leaders > .card > .image_container > .image2 {
+              display: none;
+            }
+            #team > .container > .leaders > .card:hover > .image_container > .image1 {
+              display: none;
+            }
+            #team > .container > .leaders > .card:hover > .image_container > .image2 {
+              display: block;
+            }
+        #team > .container > .leaders > .card > .text {
+          width: 60%;
+          display: flex;
+          flex-direction: column;
+          /* justify-content: center; */
+          padding: 20px;
+          color: var(--color-blue);
+        }
+          #team > .container > .leaders > .card > .text > h4 {
+            text-align: center;
+            font-size: 19px;
+          }
+          #team > .container > .leaders > .card > .text > h6 {
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center;
+            color: var(--color-gold);
+          }
+          #team > .container > .leaders > .card > .text > p {
+            text-align: justify;
+            font-size: 16px;
+          }
+
+  #team > .container > .members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+    #team > .container > .members > .card {
+      width: 23%;
+      /* display: flex;
+      justify-content: space-between; */
+      border-radius: 20px;
+      background: #e0e0e0;
+      box-shadow:  20px 20px 60px #bebebe,
+                  -20px -20px 60px #ffffff;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+      #team > .container > .members > .card > .image_container {
+        width: 50%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+        #team > .container > .members > .card > .image_container > img {
+          border-radius: 50%;
+          width: 100%;
+          margin: auto;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+        }
+          #team > .container > .members > .card > .image_container > .image2 {
+            display: none;
+          }
+          #team > .container > .members > .card:hover > .image_container > .image1 {
+            display: none;
+          }
+          #team > .container > .members > .card:hover > .image_container > .image2 {
+            display: block;
+          }
+      #team > .container > .members > .card > .text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        padding: 20px;
+        color: var(--color-blue);
+      }
+        #team > .container > .members > .card > .text > h4 {
+          text-align: center;
+          font-size: 16px;
+        }
+        #team > .container > .members > .card > .text > h6 {
+          margin-bottom: 20px;
+          font-size: 14.5px;
+          font-weight: 400;
+          text-align: center;
+          color: var(--color-gold);
+        }
+        #team > .container > .members > .card > .text > p {
+          text-align: justify;
+          font-size: 14.5px;
+        }
+
+#join_team {
+  height: 400px;
+  position: relative;
+}
+  #join_team > img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    filter: brightness(0.3);
+  }
+    #join_team > .text {
+      max-width: 1280px;
+      margin: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }  
+      #join_team > .text > h2 {
+        color: white;
+        margin-bottom: 20px;
+        font-size: 26px;
+      }  
+        #join_team > .text > .blue_button {
+          margin: auto;
+          border: 1px solid var(--color-gold);
+        }  
