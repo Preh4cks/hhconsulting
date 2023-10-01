@@ -97,15 +97,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
   }
-    nav > .container {
-      max-width: 1280px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-    }
       nav > .container > div {
         width: 50%;
       }
@@ -481,6 +474,7 @@ footer {
   #dna > .container {
     max-width: 1280px;
     width: 100%;
+    padding: 0px 20px;
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -490,9 +484,19 @@ footer {
   }
     #dna > .container > .text {
       width: 50%;
-      text-align: right;
       color: white;
-    }  
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: end;
+      text-align: right;
+    }
+    #dna > .container > .text > .button_container > a {
+      display: inline-block;
+    }
+      #dna > .container > .text > .button_container > a:first-child {
+        margin-right: 10px;
+      }
     #dna > .container > #slicer {
       width: 50%;
       position: relative;
@@ -821,3 +825,24 @@ footer {
           margin: auto;
           border: 1px solid var(--color-gold);
         }  
+
+
+#dna.reverse {
+  background-color: #f7f7f7;
+}
+  #dna.reverse > .container > .text {
+    align-items: start;
+    text-align: left;
+  }
+    #dna.services > .container > .text {
+      color: var(--color-blue);
+    } 
+    #dna.services > .container > .img {
+      width: 50%;
+      max-height: 400px;
+    }
+    #dna.services > .container > .img > img {
+      display: block;
+      height: 100%;
+      margin: auto;
+    }
