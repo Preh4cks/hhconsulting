@@ -28,7 +28,7 @@
 .blue_button:hover {
   background-color: var(--color-gold);
 }
-.white_button {
+.gold_button {
   background-color: white;
   color: var(--color-blue);
   padding: 10px 20px;
@@ -40,7 +40,7 @@
   display: block;
   width: max-content;
 }
-.white_button:hover {
+.gold_button:hover {
   background-color: var(--color-blue);
   color: white;
 }
@@ -160,7 +160,7 @@ nav {
     top: 0px;
     width: 100%;
     height: 100%;
-    left: calc(50% + 15px);
+    left: calc(50% + 10px);
     transform: translateX(-50%);
     display: flex;
     align-items: center;
@@ -189,9 +189,6 @@ nav {
       .container > .text > a {
         display: inline-block;
         margin-right: 10px;
-      }
-      .container > .text > .blue_button {
-        border: 1px solid var(--color-gold);
       }
     #hero > .container > .video {
       position: absolute;
@@ -851,3 +848,50 @@ footer {
       display: block;
       height: 80%;
     }
+
+.what_do {
+  margin: 40px 0px;
+}
+  .what_do > h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--color-blue);
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: var(--color-gold);
+    margin-bottom: 40px;
+  }
+  .what_do > .container {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+    .what_do > .container > .item {
+      width: 45%;
+      border-radius: 20px;
+      background: #e0e0e0;
+      box-shadow:  20px 20px 60px #bebebe,
+      -20px -20px 60px #ffffff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--color-blue);
+      margin-bottom: 40px;
+    }
+      .what_do > .container > .item > .image {
+        margin-bottom: 20px;
+      }
+        .what_do > .container > .item > .image > img {
+          height: 80px;
+          margin: auto;
+          filter: invert(70%) sepia(14%) saturate(1338%) hue-rotate(9deg) brightness(91%) contrast(81%);
+        }
+      .what_do > .container > .item > .description > h3 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
